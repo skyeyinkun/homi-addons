@@ -1,0 +1,39 @@
+name: "HOMI"
+version: "1.2.6"
+slug: "homi_dashboard"
+description: "HOMI 是运行在 Home Assistant 本地环境中的多端家庭控制界面，统一管理设备、房间、人员、摄像头、天气、AI 助手、授权与备份。"
+url: "https://github.com/skyeyinkun/homi-addons"
+startup: application
+boot: auto
+# node:20-alpine 官方无 armhf/i386 变体，仅支持以下三种架构
+arch:
+  - aarch64
+  - amd64
+  - armv7
+image: "ghcr.io/skyeyinkun/homi_dashboard"
+map:
+  - config:rw
+  - ssl:rw
+options:
+  HOMI_LICENSE_PUBLIC_KEY: ""
+  EZVIZ_APP_KEY: ""
+  EZVIZ_APP_SECRET: ""
+schema:
+  HOMI_LICENSE_PUBLIC_KEY: str?
+  EZVIZ_APP_KEY: str?
+  EZVIZ_APP_SECRET: password?
+ingress: true
+ingress_port: 8099
+ingress_stream: true
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "HOMI 独立 Web 访问端口，浏览器直接访问 http://HA的IP:8099 可全屏使用"
+homeassistant_api: true
+# 授权指纹采集：读取本机网络/系统信息（/network/info、/os/info、/host/info）生成离线授权硬件指纹，数据仅本地哈希比对，不上传任何信息
+hassio_api: true
+# 仅用于授权指纹采集：/network/info 等端点在 Supervisor 权限模型中要求 manager 角色
+hassio_role: manager
+panel_icon: mdi:home-circle-outline
+panel_title: "HOMI"
+stage: stable
