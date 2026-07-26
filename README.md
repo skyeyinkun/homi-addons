@@ -1,6 +1,6 @@
 # HOMI Add-ons
 
-HOMI 是运行在 Home Assistant 本地环境中的多端家庭控制界面，统一管理设备、房间、人员、摄像头、天气、AI 助手、授权与备份。
+HOMI 是一款运行在 Home Assistant 本地环境中的家庭控制面板，用于在一个界面中查看和控制已接入 Home Assistant 的家中设备，适配手机、平板、桌面及 HA 侧边栏等多种访问方式。功能的实际表现取决于你的 HA 环境、设备与网络状况。
 
 本仓库是 HOMI 的 Home Assistant 加载项**分发仓库**（仅包含安装配置与文档，不含源代码）。
 
