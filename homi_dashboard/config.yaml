@@ -14,14 +14,8 @@ image: "ghcr.io/skyeyinkun/homi_dashboard"
 map:
   - config:rw
   - ssl:rw
-options:
-  HOMI_LICENSE_PUBLIC_KEY: ""
-  EZVIZ_APP_KEY: ""
-  EZVIZ_APP_SECRET: ""
-schema:
-  HOMI_LICENSE_PUBLIC_KEY: str?
-  EZVIZ_APP_KEY: str?
-  EZVIZ_APP_SECRET: password?
+options: {}
+schema: {}
 ingress: true
 ingress_port: 8099
 ingress_stream: true
