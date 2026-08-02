@@ -1,5 +1,5 @@
 name: "HOMI"
-version: "1.3.11"
+version: "1.3.12"
 slug: "homi_dashboard"
 description: "HOMI 是运行在 Home Assistant 本地环境中的安全家庭控制面板，统一管理设备、房间、摄像头、AI、授权与备份。"
 url: "https://github.com/skyeyinkun/homi-addons"
@@ -20,9 +20,9 @@ ingress: true
 ingress_port: 8099
 ingress_stream: true
 ports:
-  8099/tcp: null
+  8099/tcp: 8099
 ports_description:
-  8099/tcp: "可选的 HOMI 独立访问端口；默认关闭，请优先使用 Home Assistant Ingress"
+  8099/tcp: "HOMI 内网独立访问端口；仅限可信局域网，禁止暴露到公网"
 homeassistant_api: true
 # 授权指纹采集：读取本机网络/系统信息（/network/info、/os/info、/host/info）生成离线授权硬件指纹，数据仅本地哈希比对，不上传任何信息
 hassio_api: true
