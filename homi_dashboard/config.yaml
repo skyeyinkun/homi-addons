@@ -1,5 +1,5 @@
 name: "HOMI"
-version: "1.3.12"
+version: "1.3.14"
 slug: "homi_dashboard"
 description: "HOMI 是运行在 Home Assistant 本地环境中的安全家庭控制面板，统一管理设备、房间、摄像头、AI、授权与备份。"
 url: "https://github.com/skyeyinkun/homi-addons"
