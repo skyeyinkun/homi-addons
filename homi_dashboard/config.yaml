@@ -1,7 +1,7 @@
 name: "HOMI"
-version: "2.0.0"
+version: "2.0.1"
 slug: "homi_dashboard"
-description: "HOMI 是运行在 Home Assistant 本地环境中的安全家庭控制面板，统一管理设备、房间、摄像头、AI、授权与备份。"
+description: "HOMI 是运行在 Home Assistant 本地环境中的家庭控制面板，统一管理设备、房间、摄像头、AI 与授权。"
 url: "https://github.com/skyeyinkun/homi-addons"
 startup: application
 boot: auto
@@ -24,7 +24,7 @@ ports:
 ports_description:
   8099/tcp: "HOMI 内网独立访问端口；仅限可信局域网，禁止暴露到公网"
 homeassistant_api: true
-# 授权指纹采集：读取本机网络/系统信息（/network/info、/os/info、/host/info）生成离线授权硬件指纹，数据仅本地哈希比对，不上传任何信息
+# 授权指纹采集：原始网络/系统值仅在本机处理；派生的机器码和哈希因子仅在用户主动发送申请码时提供给卖家签发授权
 hassio_api: true
 # 仅用于授权指纹采集：/network/info 等端点在 Supervisor 权限模型中要求 manager 角色
 hassio_role: manager
