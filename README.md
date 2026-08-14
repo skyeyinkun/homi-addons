@@ -28,7 +28,7 @@ HOMI 的 Home Assistant Add-on 官方安装仓库。此仓库只提供安装配�
 
 ## 当前版本
 
-当前版本为 [HOMI 1.0.0](homi_dashboard/CHANGELOG.md)。
+当前版本为 [HOMI 1.0.1](homi_dashboard/CHANGELOG.md)。
 
 ## 授权
 
